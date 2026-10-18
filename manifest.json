@@ -1,7 +1,7 @@
-﻿{
-  "short_name": "Planer",
-  "name": "Planer Markinhos - Controle Financeiro",
-  "description": "Planilha de controle financeiro horizontal pessoal.",
+{
+  "short_name": "Lista Compras",
+  "name": "Lista Compras Mensal · Braga",
+  "description": "Aplicativo para gerenciamento de compras mensais da família Braga.",
   "icons": [
     {
       "src": "icone-192.png",
@@ -15,7 +15,7 @@
     }
   ],
   "start_url": "index.html",
-  "background_color": "#1b587c",
+  "background_color": "#f0f2f5",
   "theme_color": "#1b587c",
   "display": "standalone",
   "orientation": "portrait"
