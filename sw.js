@@ -1,13 +1,14 @@
-const CACHE_NAME = 'planer-cache-v1';
+const CACHE_NAME = 'lista-compras-v1';
 const ASSETS = [
   'index.html',
   'manifest.json',
-  'icon-192.png',
-  'icon-512.png'
+  'icone-192.png',
+  'icone-512.png'
 ];
 
 // Instala o Service Worker e armazena os arquivos estruturais em cache
 self.addEventListener('install', (e) => {
+  self.skipWaiting(); // Força a atualização imediata se houver uma nova versão
   e.waitUntil(
     caches.open(CACHE_NAME).then((cache) => {
       return cache.addAll(ASSETS);
@@ -26,7 +27,7 @@ self.addEventListener('activate', (e) => {
           }
         })
       );
-    })
+    }).then(() => self.clients.claim()) // Assume o controle da página imediatamente
   );
 });
 
